@@ -8,6 +8,7 @@ import com.ddkangfu.service.impl.HelloServiceImpl;
 public class Application {
     public static void main(String[] args) {
         HelloService helloService = new HelloServiceImpl();
+        // 按约定获取proxy
         HelloService proxy = (HelloService) ProxyBean.getProxyBean(helloService, new MyInterceptor());
         proxy.sayHello("ZhangSan");
         System.out.println("\n################# name is null! ###############");

@@ -14,6 +14,7 @@ public class Invocation {
         this.params = params;
     }
 
+    // 反射方法
     public Object proceed() throws InvocationTargetException, IllegalAccessException {
         return method.invoke(target, params);
     }
